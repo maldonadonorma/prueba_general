@@ -1,0 +1,24 @@
+<div class="container">
+    <h3><a href="/producto/lista">Producto List</a></h3>
+    <h1>Producto </h1>
+    <table>
+        <tbody>
+            <tr>
+                <td>Nombre</td>
+                <td><%= producto.nombre %></td>
+            </tr>
+            <tr>
+                <td>Descripcion</td>
+                <td><%= producto.descripcion %></td>
+            </tr>
+            <tr>
+                <td>Precio</td>
+                <td><%= producto.precio %></td>
+            </tr>
+        </tbody>
+    </table>
+    <h3><a href="/producto/edit/<%= producto._id %>">EDITAR</a></h3>
+    <form action="/producto/delete/<%= producto._id %>" method="post">
+        <button type="submit">Borrar</button>
+    </form>
+</div>

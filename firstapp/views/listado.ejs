@@ -1,0 +1,29 @@
+
+        <div class="container">
+        <h3><a href="/producto/agregar">Agregar Producto</a></h3>
+        <h1>Productos</h1>
+        <% if (productos){  %>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Descripcion</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% productos.forEach(function(producto) { %>
+                        <tr>
+                            <td><a href="/producto/mostrar/<%= producto._id %>"><%= producto._id %></a></td>
+                            <td><a href="/producto/mostrar/<%= producto._id %>"><%= producto.nombre %></a></td>
+                            <td><%= producto.descripcion %></td>
+                            <td><%= producto.precio %></td>
+                        </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+                <%} else {%>
+                <div>No hay productos.</div>
+                <% } %>
+        </div>

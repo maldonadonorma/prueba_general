@@ -1,0 +1,42 @@
+<div>
+    <ul>
+        <li><a href="/pedido/lista">Principal</a></li>
+    </ul>
+</div>
+<div class="container">
+    <h1>Productos</h1>
+    <% if (productos){  %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Descripcion</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% productos.forEach(function(producto,i) { %>
+                    <tr>
+                        <form name="formulario<%= i %>" id="formulario<%= i %>" method="POST" action="/pedido/save">
+                        <td><%= producto._id %></td>
+                        <td><%= producto.nombre %></td>
+                        <td><%= producto.descripcion %></td>
+                        <td><%= producto.precio %></td>
+                        <td>
+                            <input type="text" name="cantidad" id="cantidad" maxlength="6" />
+                            <input type="hidden" name="idProducto" id="idProducto" maxlength="6" value="<%= producto._id %>" />
+                            <input type="hidden" name="precio" id="precio" maxlength="6" value="<%= producto.precio %>" />
+                        </td>
+                        <td><button type="submit">Comprar</button></td>
+                        </form>
+                    </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+            <%} else {%>
+            <div>No hay productos.</div>
+            <% } %>
+    </div>

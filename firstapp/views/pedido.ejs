@@ -1,0 +1,17 @@
+        <h1>Lista de productos</h1>
+        <table id="productos" class="clasetabla"></table>
+
+        <!--VA FORMULARIO-->
+
+        <h1>Pedido</h1>
+        <form name="compra" id="compra" method="post" action="#">
+          <label> Nombre del producto <input type="text" id="nombre" disabled /> </label>
+          <label>
+            Precio <input type="text" id="precio" disabled />
+          </label>
+          <label>
+            Cantidad <input type="text" id="cantidad" maxlength="6" />
+          </label>
+          <button type="button" onclick="agregarCarrito();">Enviar</button>
+        </form>
+        <h1>Carrito</h1>

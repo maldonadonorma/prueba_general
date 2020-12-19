@@ -1,0 +1,31 @@
+<div class="container">
+    <h3><a href="/pedido/lista">Pedido Lista</a></h3>
+    <h1>Pedido </h1>
+    <table>
+        <tbody>
+            <tr>
+                <td>Nombre</td>
+                <td><%= producto.nombre %></td>
+            </tr>
+            <tr>
+                <td>Descripcion</td>
+                <td><%= producto.descripcion %></td>
+            </tr>
+            <tr>
+                <td>Precio</td>
+                <td><%= pedido.precio %></td>
+            </tr>
+            <tr>
+                <td>Cantidad</td>
+                <td><%= pedido.cantidad %></td>
+            </tr>
+            <tr>
+                <td>SubTotal</td>
+                <td><%= pedido.cantidad * pedido.precio %></td>
+            </tr>
+        </tbody>
+    </table>
+    <form action="/pedido/delete/<%= pedido._id %>" method="post">
+        <button type="submit">Borrar</button>
+    </form>
+</div>

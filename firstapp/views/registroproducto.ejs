@@ -1,0 +1,16 @@
+<div>
+    <ul>
+        <li><a href="/producto/lista">Lista de productos</a></li>
+    </ul>
+</div>
+
+<form name="formulario" id="formulario" method="POST" action="/producto/save">
+    <label> Nombre del producto <input type="text" name="nombre" id="nombre" /> </label>
+    <label>
+      Descripción <input type="text" name="descripcion" id="descripcion" />
+    </label>
+    <label>
+      Precio <input type="text" name="precio" id="precio" maxlength="6" />
+    </label>
+    <button type="submit">Enviar</button>
+  </form>

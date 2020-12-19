@@ -1,0 +1,17 @@
+<div>
+    <ul>
+        <li><a href="/producto/lista">listado de producto</a></li>
+    </ul>
+</div>
+
+<form name="formulario" id="formulario" method="POST" action="/producto/update/<%= producto._id%>">
+    <label> Nombre del producto <input type="text" name="nombre" id="nombre" value="<%= producto.nombre%>" /> </label>
+    <label>
+      Descripción <input type="text" name="descripcion" id="descripcion" value="<%= producto.descripcion%>" />
+    </label>
+    <label>
+      Precio <input type="text" name="precio" id="precio" maxlength="6" value="<%= producto.precio%>" />
+    </label>
+    <input type="hidden" name="id" id="id" maxlength="6" value="" />
+    <button type="submit" >Enviar</button>
+  </form>
