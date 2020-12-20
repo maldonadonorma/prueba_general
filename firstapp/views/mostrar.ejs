@@ -1,24 +1,52 @@
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../stylesheets/style.css">
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Inicio</a></li>
+            <li><a href="/producto/lista">Catalogo</a></li>
+
+
+            <li><a href="/pedido/lista">Carrito de compras</a></li>
+            <li><a href="/main">Encuesta de la semana</a></li>
+        </ul>
+    </div>
+</nav>
+
 <div class="container">
-    <h3><a href="/producto/lista">Producto List</a></h3>
-    <h1>Producto </h1>
-    <table>
+
+
+    <h1 class="titulo2">Producto agregado </h1>
+    <table class="table">
         <tbody>
             <tr>
                 <td>Nombre</td>
-                <td><%= producto.nombre %></td>
+                <td>
+                    <%= producto.nombre %>
+                </td>
             </tr>
             <tr>
                 <td>Descripcion</td>
-                <td><%= producto.descripcion %></td>
+                <td>
+                    <%= producto.descripcion %>
+                </td>
             </tr>
             <tr>
                 <td>Precio</td>
-                <td><%= producto.precio %></td>
+                <td>
+                    <%= producto.precio %>
+                </td>
             </tr>
         </tbody>
     </table>
-    <h3><a href="/producto/edit/<%= producto._id %>">EDITAR</a></h3>
+    <a class="Do" href="/producto/edit/<%= producto._id %>">EDITAR</a>
     <form action="/producto/delete/<%= producto._id %>" method="post">
-        <button type="submit">Borrar</button>
+        <button class="Do" type="submit">Borrar</button>
     </form>
+</div>
+<div class="container">
+    <a class="Do" href="/producto/lista">Ver Catalogo</a>
 </div>

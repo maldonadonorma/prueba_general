@@ -1,27 +1,53 @@
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="stylesheets/style.css">
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+
+        <ul class="nav navbar-nav">
+            <li><a href="/producto/lista">Catalogo</a></li>
+            <li class="active"><a href="/">Inicio</a></li>
+
+            <li><a href="/pedido/lista">Carrito de compras</a></li>
+            <li><a href="/main">Encuesta de la semana</a></li>
+        </ul>
+    </div>
+</nav>
 <div class="container">
-    <h3><a href="/pedido/lista">Pedido Lista</a></h3>
+    <h3><a href="/pedido/lista">Pedido Lista-mostarpedido</a></h3>
     <h1>Pedido </h1>
     <table>
         <tbody>
             <tr>
                 <td>Nombre</td>
-                <td><%= producto.nombre %></td>
+                <td>
+                    <%= producto.nombre %>
+                </td>
             </tr>
             <tr>
                 <td>Descripcion</td>
-                <td><%= producto.descripcion %></td>
+                <td>
+                    <%= producto.descripcion %>
+                </td>
             </tr>
             <tr>
                 <td>Precio</td>
-                <td><%= pedido.precio %></td>
+                <td>
+                    <%= pedido.precio %>
+                </td>
             </tr>
             <tr>
                 <td>Cantidad</td>
-                <td><%= pedido.cantidad %></td>
+                <td>
+                    <%= pedido.cantidad %>
+                </td>
             </tr>
             <tr>
                 <td>SubTotal</td>
-                <td><%= pedido.cantidad * pedido.precio %></td>
+                <td>
+                    <%= pedido.cantidad * pedido.precio %>
+                </td>
             </tr>
         </tbody>
     </table>
